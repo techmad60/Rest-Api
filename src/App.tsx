@@ -1,12 +1,7 @@
-
-import './App.css'
-
-function App() {
+export default function App () {
   return (
     <>
-      <p className='text-red-500'>We go again</p>
+      <p className="text-red-500">Blessings and honor, glory and power</p> 
     </>
   )
 }
-
-export default App

@@ -1,18 +1,26 @@
 import "./App.css"
-import { FaMoon } from "react-icons/fa"
+import { FaMoon, FaSearch } from "react-icons/fa"
 export default function App () {
   return (
-    <header>
-      <div className="flex items-center justify-between">
-        <div>
-          <h1>Where in the world?</h1>
+    <div className="flex flex-col">
+      <header>
+        <div className="flex items-center justify-between bg-white px-4 py-8 shadow-md">
+          <div>
+            <h1 className="font-bold">Where in the world?</h1>
+          </div>
+          <div className="flex items-center gap-2">
+            <FaMoon className="text-white stroke-black stroke-[40px]" />
+            <p>Dark mode</p>
+          </div>
         </div>
-        <div className="flex items-center gap-2">
-          <FaMoon className="text-white stroke-black stroke-[10px]" />
-          <p>Light mode</p>
+      </header>
+      <main>
+        <div className="flex items-center bg-white mx-4 mt-6 py-4 px-8 rounded-md gap-8 shadow-md">
+          <FaSearch className="text-xl text-gray-300"/>
+          <input type="text" placeholder="Search for a country..." className="placeholder:text-gray-300 font-light"/>
         </div>
-      </div>
-      
-    </header>
+      </main>
+    </div>
+    
   )
 }

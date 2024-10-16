@@ -1,6 +1,12 @@
-import "./App.css"
+import "./App.css";
+import { useState } from "react";
 import { FaMoon, FaSearch } from "react-icons/fa"
 export default function App () {
+  const [darkMode, isDarkMode] = useState(false)
+
+  function toggleDarkMode () {
+    isDarkMode(!darkMode)
+  }
   return (
     <div className="flex flex-col">
       <header>
@@ -8,8 +14,8 @@ export default function App () {
           <div>
             <h1 className="font-bold">Where in the world?</h1>
           </div>
-          <div className="flex items-center gap-2">
-            <FaMoon className="text-white stroke-black stroke-[40px]" />
+          <div className="flex items-center gap-2" onClick={toggleDarkMode}>
+            <FaMoon className={darkMode ? "text-white stroke-black stroke-[40px]" : ""} />
             <p>Dark mode</p>
           </div>
         </div>

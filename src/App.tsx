@@ -7,16 +7,17 @@ export default function App () {
   function toggleDarkMode () {
     isDarkMode(!darkMode)
   }
+ 
   return (
     <div className="flex flex-col">
-      <header>
-        <div className="flex items-center justify-between bg-white px-4 py-8 shadow-md">
+      <header className="">
+        <div className={`${darkMode ? "bg-slate-800 text-white" : "bg-white text-black" } flex items-center justify-between px-4 py-8 shadow-md"`}>
           <div>
             <h1 className="font-bold">Where in the world?</h1>
           </div>
           <div className="flex items-center gap-2" onClick={toggleDarkMode}>
-            <FaMoon className={darkMode ? "text-white stroke-black stroke-[40px]" : ""} />
-            <p>Dark mode</p>
+            <FaMoon className={`${darkMode ? "text-white stroke-white " : " text-white stroke-black stroke-[40px] "}`}/>
+            <p>{darkMode ? "Light Mode" : "Dark Mode"}</p>
           </div>
         </div>
       </header>

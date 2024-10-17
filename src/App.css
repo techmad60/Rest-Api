@@ -4,4 +4,5 @@
 body {
   font-family: "Nunito Sans", serif;
   background-color: hsl(0, 0%, 98%);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }

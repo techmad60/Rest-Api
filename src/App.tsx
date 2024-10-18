@@ -15,10 +15,10 @@ export default function App () {
           <div>
             <h1 className="font-bold">Where in the world?</h1>
           </div>
-          <div className="flex items-center gap-2" onClick={toggleDarkMode}>
+          <button className="flex items-center gap-2" onClick={toggleDarkMode}>
             <FaMoon className={`${darkMode ? "text-white stroke-white " : " text-white stroke-black stroke-[40px] "}`}/>
             <p>{darkMode ? "Light Mode" : "Dark Mode"}</p>
-          </div>
+          </button>
         </div>
       </header>
       <main>

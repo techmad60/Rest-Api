@@ -24,7 +24,7 @@ export default function App () {
       <main>
         <div className="flex items-center bg-white mx-4 mt-6 py-4 px-8 rounded-md gap-8 shadow-md">
           <FaSearch className="text-xl text-gray-300"/>
-          <input type="text" placeholder="Search for a country..." className="placeholder:text-gray-300 font-light"/>
+          <input type="text" placeholder="Search for a country..." className={`${darkMode ? "placeholder:text-white" : "placeholder:text-gray-300 "}font-light`}/>
         </div>
       </main>
     </div>
